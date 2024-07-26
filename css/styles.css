@@ -37,9 +37,7 @@ a {
   text-decoration: none;
 }
 .container {
-  /* max-width: 1158px; */
   max-width: 320px;
-  /* padding: 0 15px; */
   padding: 0 16px;
   margin: 0 auto;
 }
@@ -56,27 +54,10 @@ a {
 }
 
 .navigation {
+  flex-grow: 1;
   display: flex;
   align-items: center;
-}
-
-.nav-list {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.address {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  font-style: normal;
-}
-
-.add-list {
-  display: flex;
-  align-items: center;
-  gap: 40px;
+  justify-content: space-between;
 }
 
 .link-logo {
@@ -88,8 +69,8 @@ a {
   text-transform: uppercase;
   color: #4d5ae5;
   text-decoration: none;
-  padding: 24px 0;
-  margin-right: 76px;
+  padding: 16px 0;
+  /* margin-right: 76px; */
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -97,6 +78,16 @@ a {
   color: #2e2f42;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-hero-icon {
+  fill: #2f2f37;
+}
+
+.nav-list {
+  display: none;
+  align-items: center;
+  gap: 40px;
 }
 
 .nav-link {
@@ -127,17 +118,6 @@ a {
   background-color: #404bbf;
 }
 
-.add-link {
-  display: block;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
-  padding: 24px 0;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 .logo-name:hover,
 .logo-name:focus,
 .link-logo:hover,
@@ -150,9 +130,34 @@ a {
   color: #404bbf;
 }
 
+.address {
+  display: none;
+  align-items: center;
+  margin-left: auto;
+  font-style: normal;
+}
+
+.add-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.add-link {
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+  padding: 24px 0;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .main {
-  max-width: 1440px;
-  padding: 188px 0 188px;
+  max-width: 320px;
+  padding: 72px 0;
   margin: 0 auto;
 
   background-color: #2e2f42;
@@ -161,21 +166,21 @@ a {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero.jpg);
+    url(../images/mobile/hero-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .main-title {
-  max-width: 496px;
-  margin: 0 auto 48px;
+  max-width: 216px;
+  margin: 0 auto 72px;
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
 }
 .main-button {
   display: block;
@@ -187,12 +192,13 @@ a {
   padding: 16px 32px;
 
   color: #fff;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
   background-color: #4d5ae5;
   cursor: pointer;
-
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -204,7 +210,6 @@ a {
 }
 
 .feature {
-  /* padding: 120px 0; */
   padding: 96px 0;
 }
 
@@ -269,7 +274,6 @@ a {
 
 .team {
   background: #f4f4fd;
-  /* padding: 120px 0 120px; */
   padding: 96px 0;
 }
 
@@ -281,7 +285,6 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  /* text-transform: capitalize; */
 }
 
 .team-list {
@@ -289,7 +292,6 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   gap: 72px;
-  /* gap: 24px; */
 }
 
 .team-items {
@@ -360,7 +362,6 @@ a {
 }
 
 .portfolio {
-  /* padding: 120px 0; */
   padding: 96px 0;
 }
 
@@ -374,15 +375,14 @@ a {
   text-align: center;
   color: #2e2f42;
 }
+
 .port-list {
   display: flex;
   flex-wrap: wrap;
-  /* gap: 48px 24px; */
   gap: 48px;
 }
 
 .port-list-item {
-  /* width: calc((100% - 48px) / 3); */
   max-width: 100%;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -427,12 +427,12 @@ a {
 }
 
 .port-name {
-  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 .port-desc {
   margin: 0;
@@ -444,17 +444,14 @@ a {
 }
 
 .footer {
-  /* padding: 100px 0; */
   padding: 96px 0;
   background: #2e2f42;
 }
 
 .foot-container {
   display: flex;
-  /* justify-content: flex-start; */
   flex-wrap: wrap;
   justify-content: center;
-  /* align-items: baseline; */
   gap: 72px;
 }
 
@@ -468,8 +465,10 @@ a {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+
   margin-bottom: 16px;
 }
+
 .foot-logo-name {
   color: #f4f4fd;
 }
@@ -484,19 +483,17 @@ a {
 }
 
 .social-media {
-  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #fff;
+  color: #ffffff;
   text-align: center;
   margin-bottom: 16px;
 }
 
 .foot-social {
   display: flex;
-  /* justify-content: flex-start; */
   justify-content: space-between;
   gap: 16px;
 }
@@ -530,7 +527,6 @@ a {
 .footer-form {
   display: flex;
   flex-wrap: wrap;
-  /* gap: 24px; */
   gap: 16px;
 }
 
@@ -542,7 +538,6 @@ a {
 
   border: 1px solid #ffffff;
   border-radius: 4px;
-  /* width: 264px; */
   width: 288px;
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
@@ -565,6 +560,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 16px;
 
   border: none;
   border-radius: 4px;
@@ -585,7 +581,6 @@ a {
 }
 
 .foot-icon-send {
-  margin-left: 16px;
   fill: #fff;
 }
 
@@ -850,9 +845,74 @@ textarea.user-modal {
   fill: #4d5ae5;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx),
+  (min-resolution: 192 dpi) {
+  .main {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/mobile/hero-mob@2x.jpg);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
+  }
+
+  .link-logo {
+    padding: 24px 0;
+  }
+
+  .nav-hero-icon {
+    display: none;
+  }
+
+  .navigation {
+    flex-grow: 1;
+    justify-content: flex-start;
+  }
+
+  .nav-list {
+    display: flex;
+    margin-left: 120px;
+  }
+
+  .address {
+    display: contents;
+  }
+
+  .add-list {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .add-link {
+    padding: 0;
+    font-size: 12px;
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+  }
+
+  .main {
+    max-width: 768px;
+    padding: 112px 0;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/tablet/hero-tablet.jpg);
+  }
+
+  .main-title {
+    max-width: 496px;
+    margin: 0 auto 36px;
+    font-size: 56px;
+    line-height: 1.07;
   }
 
   .feature-list {
@@ -861,6 +921,10 @@ textarea.user-modal {
 
   .feature-list-items {
     flex-basis: calc((100% - 24px) / 2);
+  }
+
+  .team-container {
+    max-width: 584px;
   }
 
   .feature-title {
@@ -892,7 +956,7 @@ textarea.user-modal {
   }
 
   .foot-container {
-    padding: 0 108px;
+    max-width: 584px;
     justify-content: flex-start;
     gap: 72px 24px;
   }
@@ -917,12 +981,52 @@ textarea.user-modal {
     width: 264px;
     opacity: 0.3;
   }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192 dpi) {
+    .main {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/tablet/hero-tablet@2x.jpg);
+    }
+  }
 }
 
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
     padding: 0 15px;
+  }
+
+  .nav-list {
+    margin-left: 76px;
+  }
+
+  .add-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .main {
+    max-width: 1440px;
+    padding: 188px 0;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/desctop/hero-desctop.jpg);
+  }
+
+  .main-title {
+    max-width: 496px;
+    margin: 0 auto 48px;
+    font-size: 56px;
+    line-height: 1.07;
   }
 
   .feature-list-items {
@@ -944,5 +1048,60 @@ textarea.user-modal {
   .feature-text {
     max-width: 264px;
     font-weight: 400;
+  }
+
+  .team {
+    padding: 120px 0;
+  }
+
+  .team-list {
+    gap: 24px;
+  }
+
+  .team-items {
+    flex-basis: calc((100% - 72px) / 4);
+  }
+
+  .portfolio {
+    padding: 120px 0;
+  }
+
+  .port-list {
+    gap: 48px 24px;
+  }
+
+  .port-list-item {
+    flex-basis: calc((100% - 48px) / 3);
+  }
+
+  .footer {
+    padding: 100px 0;
+  }
+
+  .foot-container {
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 0;
+  }
+
+  .foot-inner-social {
+    margin-left: 120px;
+  }
+
+  .foot-inner-form {
+    margin-left: 80px;
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192 dpi) {
+    .main {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/desctop/hero-desctop@2x.jpg);
+    }
   }
 }
